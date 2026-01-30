@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chest</title>
+
+    <style>
+    body {
+        font-family: system-ui, Arial, Helvetica, sans-serif;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(7, 2, 2, 0.81);
+        }
+
+    #para {
+        color: aqua;
+        font-size: 18px;
+        }
+
+    #count {
+        color: aqua;
+        }
+
+    #empty {
+        color: aqua;
+        }
+
+    .header2 {
+        background-color: aqua;
+        border: solid 2px;
+        font-size: 30px;
+        }
+
+    .header1 {
+        background-color: aqua;
+        text-align: center;
+        align-content: center;
+        border: solid  2px;
+        border-radius: 2px;
+        padding: 2px;
+        margin:auto
+        }
+
+    .inventory {
+        display: grid;
+        text-align: center;
+        align-content: center;
+        grid-template-columns: repeat(6, 60px);
+        grid-template-rows: repeat(1, 60px);
+        gap: 2px;
+        background-color: #585858;
+        padding: 10px;
+        border: 2px solid aqua;
+        font-size: 24px;
+        width: 372px;
+        }
+
+    .chest {
+        display: grid;
+        text-align: center;
+        align-content: center;
+        height: auto;
+        grid-template-columns: repeat(6, 60px);
+        grid-template-rows: repeat(3, 60px);
+        gap: 2px;
+        background: color #585858 ;
+        padding: 10px;
+        border: 2px solid  aqua;
+        font-size: 24px;
+        width: 372px;
+        }
+
+    .slot {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        align-content: center;
+        background-color: #464646;
+        border: 1px solid ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: #ffffff;
+        }
+
+    .slot:hover {
+        background-color: #696969;
+        }
+
+    #button {
+        color:black;
+        background-color: aqua;
+        }
+
+    #chestImg {
+        display: none;
+        }
+
+    </style>
+
+    </head>
+    <body>
+        <h1 class="header1">The Chest</h1>
+        <br>
+        <p id="para">Klikk på et element for å legge det i inventory</p>
+
+        <section class="chest">
+            <!--Rad1-->
+            <div id="r1k1" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+            <div id="r1k2" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')">🦆</div>
+            <div id="r1k3" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+            <div id="r1k4" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+            <div id="r1k5" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')">🫀</div>
+            <div id="r1k6" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+
+            <!--Rad2-->
+            <div id="r2k1" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+            <div id="r2k2" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+            <div id="r2k3" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')">🦖</div>
+            <div id="r2k4" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+            <div id="r2k5" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+            <div id="r2k6" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+
+            <!--Rad3-->
+            <div id="r3k1" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+            <div id="r3k2" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')">👁️</div>
+            <div id="r3k3" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+            <div id="r3k4" class="slot"onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')">🦴</div>
+            <div id="r3k5" class="slot" onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+            <div id="r3k6" class="slot"onclick="trykk(this, 'ir1','ir2','ir3','ir4','ir5','ir6')"></div>
+        </section>
+
+        <section class="inventory">
+            <div id="ir1" class="slot" onclick="trykk(this, 'r1k1', 'r1k2','r1k3','r1k4','r1k5','r1k6','r2k1','r2k2','r2k3','r2k4','r2k5','r2k6','r3k1','r3k2','r3k3','r3k4','r3k5','r3k6')">👻</div>
+            <div id="ir2" class="slot" onclick="trykk(this, 'r1k1', 'r1k2','r1k3','r1k4','r1k5','r1k6','r2k1','r2k2','r2k3','r2k4','r2k5','r2k6','r3k1','r3k2','r3k3','r3k4','r3k5','r3k6')"></div>
+            <div id="ir3" class="slot" onclick="trykk(this, 'r1k1', 'r1k2','r1k3','r1k4','r1k5','r1k6','r2k1','r2k2','r2k3','r2k4','r2k5','r2k6','r3k1','r3k2','r3k3','r3k4','r3k5','r3k6')"></div>
+            <div id="ir4" class="slot" onclick="trykk(this, 'r1k1', 'r1k2','r1k3','r1k4','r1k5','r1k6','r2k1','r2k2','r2k3','r2k4','r2k5','r2k6','r3k1','r3k2','r3k3','r3k4','r3k5','r3k6')"></div>
+            <div id="ir5" class="slot" onclick="trykk(this, 'r1k1', 'r1k2','r1k3','r1k4','r1k5','r1k6','r2k1','r2k2','r2k3','r2k4','r2k5','r2k6','r3k1','r3k2','r3k3','r3k4','r3k5','r3k6')"></div>
+            <div id="ir6" class="slot" onclick="trykk(this, 'r1k1', 'r1k2','r1k3','r1k4','r1k5','r1k6','r2k1','r2k2','r2k3','r2k4','r2k5','r2k6','r3k1','r3k2','r3k3','r3k4','r3k5','r3k6')"></div>
+        </section>
+
+        <br>
+
+        <button id="button" onclick="myChest()">Open Chest</button>
+        <img id="chestImg" src="../assets/images/mcchest.jpg" alt="Treasure chest">
+
+        <script>
+        function myChest() {
+            const img = document.getElementById('chestImg');
+            if (img.style.display === 'none') {
+                img.style.display = 'block';
+            } else {
+                img.style.display = 'none';
+            }
+        }
+
+        function trykk(tagElement, alt1, alt2, alt3, alt4, alt5, alt6, alt7, alt8, alt9, alt10, alt11, alt12, alt13, alt14, alt15, alt16, alt17, alt18){
+            if(document.getElementById(alt1).innerHTML == ""){
+                document.getElementById(alt1).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt2).innerHTML == ""){
+                document.getElementById(alt2).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt3).innerHTML == ""){
+                document.getElementById(alt3).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt4).innerHTML == ""){
+                document.getElementById(alt4).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt5).innerHTML == ""){
+                document.getElementById(alt5).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt6).innerHTML == ""){
+                document.getElementById(alt6).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt7).innerHTML == ""){
+                document.getElementById(alt7).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt8).innerHTML == ""){
+                document.getElementById(alt8).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt9).innerHTML == ""){
+                document.getElementById(alt9).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt10).innerHTML == ""){
+                document.getElementById(alt10).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt11).innerHTML == ""){
+                document.getElementById(alt11).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt12).innerHTML == ""){
+                document.getElementById(alt12).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt13).innerHTML == ""){
+                document.getElementById(alt13).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt14).innerHTML == ""){
+                document.getElementById(alt14).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt15).innerHTML == ""){
+                document.getElementById(alt15).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt16).innerHTML == ""){
+                document.getElementById(alt16).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt17).innerHTML == ""){
+                document.getElementById(alt17).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+            if(document.getElementById(alt18).innerHTML == ""){
+                document.getElementById(alt18).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = "";
+            }
+        }
+        </script>
+    </body>
+</html>
